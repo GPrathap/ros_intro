@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" 
+     value="log4j.logger.ros.ros_debugging=DEBUG"/>
+
+  <node pkg="ros_debugging" type="gdb_hello_world" name="gdb_hello_world"
+        output="screen" launch-prefix="xterm -e gdb --args"/>
+</launch>
+

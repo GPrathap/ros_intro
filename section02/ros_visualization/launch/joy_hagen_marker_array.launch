@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <node pkg="ros_visualization" type="joy_hagen_marker_array" name="joy_hagen_marker_array" output="screen"/>
+  <node pkg="rviz" type="rviz" name="rviz" />
+</launch>
+

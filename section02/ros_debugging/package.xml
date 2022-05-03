@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package>
+  <name>ros_debugging</name>
+  <version>0.0.1</version>
+  <description>ROS debugging</description>
+  <maintainer email="ggeesara@gmail.com">GPrathap</maintainer>
+  <author email="ggeesara@gmail.com">GPrathap</author>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+</package>
