@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <node pkg="ros_debugging_skeleton" type="rqt_logging" name="rqt_logging"
+        output="screen"/>
+</launch>
+

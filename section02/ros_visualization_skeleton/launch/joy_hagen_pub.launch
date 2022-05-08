@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <node pkg="ros_visualization_skeleton" type="joy_hagen_pub" name="joy_hagen_pub" output="screen"/>
+</launch>
+
