@@ -13,7 +13,7 @@ bool add(hello_friend::friend_info_service::Request  &req,
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "service_server");
-  ros::NodeHandle n;
+  ros::NodeHandle n("~");
 
   ros::ServiceServer service = n.advertiseService("get_friend_value", add);
   ROS_INFO("Service server is ready");

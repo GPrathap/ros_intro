@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <env name="ROSCONSOLE_CONFIG_FILE" value="log4j.logger.ros.ros_debugging=DEBUG"/>
+  <!-- sudo apt  install valgrind -->
   <node pkg="ros_debugging" type="rqt_logging" name="rqt_logging"
-        output="screen" launch-prefix="valgrind"/>
+        output="screen" launch-prefix="valgrind --leak-check=full"/>
 </launch>
 

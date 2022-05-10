@@ -5,16 +5,23 @@
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "service_client");
-  if (argc != 2)
-  {
-    ROS_INFO("usage: need id and value");
-    return 1;
-  }
-
-  ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<hello_friend::friend_info_service>("get_friend_value");
+  // if (argc != 2)
+  // {
+  //   ROS_INFO("usage: need id and value");
+  //   return 1;
+  // }
+  ros::NodeHandle n("~");
+  ros::ServiceClient client = n.serviceClient<hello_friend::friend_info_service>("/friend_service_server/get_friend_value");
   hello_friend::friend_info_service srv;
-  srv.request.value = atoi(argv[1]);
+
+  int value = 34;
+  if (n.getParam("value", value))
+  {
+    std::cout<< "value: "<< value << std::endl;
+    srv.request.value = value;
+  }else{
+     std::cout<< "value param is not set "<< std::endl;
+  }
  
   if (client.call(srv))
   {
