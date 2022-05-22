@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-	<node name ="friend_hello_pub" pkg="hello_friend" type="friend_hello_pub" output="screen"/>
-	<node name ="friend_hello_sub" pkg="hello_friend" type="friend_hello_sub"  output="screen"/>
-</launch> 

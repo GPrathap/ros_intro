@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
-  <!-- sudo apt  install valgrind -->
-  <node pkg="ros_debugging" type="rqt_logging" name="rqt_logging"
-        output="screen" launch-prefix="valgrind --leak-check=full"/>
-</launch>
-
