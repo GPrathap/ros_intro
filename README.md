@@ -1,4 +1,19 @@
 # Introduction to ROS
+## Course Structure :space_invader:
+    
+- Section 1 :space_invader:	
+    - ROS Fundamentals :books:	
+    - Workout Examples :books:	
+- Section 2 :space_invader:	
+    - ROS Debugging :books:	
+    - ROS Visualization :books:	
+    - ROS Basic Control :books:	
+    - ROS Simulation (Gazebo+URDF) :books:	
+- Section 3 :space_invader:	
+    - Mini Group Project 
+- References
+    - http://wiki.ros.org/Documentation
+    - Learning ROS for Robotics Programming by Aaron Martinez and Enrique Fernández
 
 ## Instruction for running the docker container  
 
@@ -12,4 +27,3 @@
     ./section00/run_ros_node_[cpu|gpu].sh start 
 ### To stop the container 
     ./section00/run_ros_node_[cpu|gpu].sh stop
- 
