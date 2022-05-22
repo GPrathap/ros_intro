@@ -1,15 +1,15 @@
 # Introduction to ROS
 ## Course Structure :space_invader:
     
-- Section 1 :space_invader:	
+- Section 1 :alien:	
     - ROS Fundamentals :books:	
     - Workout Examples :books:	
-- Section 2 :space_invader:	
+- Section 2 :alien:	
     - ROS Debugging :books:	
     - ROS Visualization :books:	
     - ROS Basic Control :books:	
     - ROS Simulation (Gazebo+URDF) :books:	
-- Section 3 :space_invader:	
+- Section 3 :alien:	
     - Mini Group Project 
 - References
     - http://wiki.ros.org/Documentation
