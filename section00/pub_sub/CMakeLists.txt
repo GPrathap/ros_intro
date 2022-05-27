@@ -10,6 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
 	FILES
 	friend_info.msg
+  r2d2.msg
 )
 
 add_service_files(

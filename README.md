@@ -2,7 +2,7 @@
 ## Course Structure :space_invader:
     
 - Section 1 :alien:	
-    - ROS Fundamentals [:books:	lecture 01](lectures/ros_lecture01.pdf)
+    - ROS Fundamentals [:books:	lecture 01](lectures/ros_lecture01.pdf) [:books:	lecture 02](lectures/ros_lecture02.pdf)
     - Workout Examples :books:	
 - Section 2 :alien:	
     - ROS Debugging :books:	
