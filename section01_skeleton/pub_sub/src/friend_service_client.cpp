@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <ros/console.h>
 #include <hello_friend/friend_info_service.h>
 #include <cstdlib>
 
@@ -15,13 +16,20 @@ int main(int argc, char **argv)
 
   ros::NodeHandle n;
   // TODO create a service client with the name get_friend_value
-  // ros::ServiceClient client = TODO
+  ros::ServiceClient client = n.serviceClient<hello_friend::friend_info_service>("get_friend_value");
   hello_friend::friend_info_service srv;
-  // TODO set service requst value as standard user input, i.e., argv[1]
-  // srv.request.value = TODO;
- 
+  srv.request.value = 456;
   // TODO Call the service and read the response and print the response.
   //  If the service is unavailable printer service is not available
 
+  bool is_fine = client.call(srv);
+  if(is_fine){
+    // std::cout<< "service respose "<< srv.response.heartbeat << std::endl;
+    ROS_INFO_STREAM("service respose " << srv.response.heartbeat);
+  } else {
+    // std::cout<< "Something wrong with the server"<< std::endl;
+    ROS_INFO("Something wrong with the server");
+  }
+  
   return 0;
 }

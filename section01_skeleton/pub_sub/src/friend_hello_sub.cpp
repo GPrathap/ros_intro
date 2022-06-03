@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "sub_node");
   ros::NodeHandle n;
-  // TODO add subscriber with the callback, i.e., callback_sub
+  ros::Subscriber sub = n.subscribe("/sdfdsf", 1, callback_sub);
   // ros::Subscriber sub = TODO;
   ros::spin();
   return 0;
