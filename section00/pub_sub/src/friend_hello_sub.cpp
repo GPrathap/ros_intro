@@ -1,7 +1,6 @@
 #include "ros/ros.h"
 #include <hello_friend/friend_info.h>
 
-
 void callback_sub(const hello_friend::friend_info::ConstPtr& msg)
 {
   ROS_INFO("Publisher name: [%s] [%i]", msg->name.c_str(), msg->id);

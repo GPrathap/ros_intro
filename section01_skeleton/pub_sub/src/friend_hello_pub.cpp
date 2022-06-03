@@ -1,26 +1,18 @@
 #include <ros/ros.h>
 #include <hello_friend/friend_info.h>
-#include <sstream>
 
-// http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29
-int main(int argc, char **argv)
-{
-  ros::init(argc, argv, "friend_hello_pub");
-  ros::NodeHandle n;
-  
-  // TODO add publisher with topic /send_hello_topic
-  // ros::Publisher pub = TODO;
-  // TODO publsher should publish message at 10Hz 
-  while (ros::ok())
-  {
-    // TODO create a message of friend_info
-   
-    // TODO set message fileds: name and it 
-    
-    // TODO publish the message 
-
+int main(int argn, char** argc){
+  ros::init(argn, argc, "r2d2_pose_estimator");
+  ros::NodeHandle nd;
+  ros::Publisher pub = nd.advertise<hello_friend::friend_info>("/r2d2_pose", 10);
+  ros::Rate rate(10);
+  while(ros::ok()){
+    hello_friend::friend_info msg;
+    msg.name = "r2d2";
+    msg.id = 456;
+    pub.publish(msg);
     ros::spinOnce();
-    // TODO sleep according to message rate
-  }
+    rate.sleep();
+  } 
   return 0;
 }

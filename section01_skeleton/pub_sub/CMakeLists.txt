@@ -5,6 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   message_generation
+  hello_friend
 )
 
 # TODO add message 
@@ -34,9 +35,9 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-# add_executable(friend_hello_pub src/friend_hello_pub.cpp)
+add_executable(friend_hello_pub src/friend_hello_pub.cpp)
 # add_dependencies(friend_hello_pub  hello_friend_generate_messages_cpp)
-# target_link_libraries(friend_hello_pub ${catkin_LIBRARIES})
+target_link_libraries(friend_hello_pub ${catkin_LIBRARIES})
 
 # add_executable(friend_hello_sub src/friend_hello_sub.cpp)
 # add_dependencies(friend_hello_sub  hello_friend_generate_messages_cpp)
