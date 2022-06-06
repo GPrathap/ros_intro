@@ -27,6 +27,8 @@ Assume, you do not have the access to the implementation of the commander_node, 
 
 Your task is to do the following:
 
+* Download and build this ROS package in your workspace (It is called homework1)
+
 * Create a ROS package with your name(s)
     
     Package name should be as following: homework1_firstname_lastname, for example: homework1_hany_hamed
@@ -46,10 +48,14 @@ Your task is to do the following:
         - x=8, y=5, theta=M_PI/2.0, name="turtle2"
         - x=9.25, y=5, theta=M_PI, name="turtle3"
         - x=9.25, y=5, theta=0, name="turtle4"
-        - [turtlesim/Spawn service](http://docs.ros.org/en/api/turtlesim/html/srv/Spawn.html)
+        - [Source: turtlesim/Spawn service](http://docs.ros.org/en/api/turtlesim/html/srv/Spawn.html)
+    * Then this node terminates
+
+    The starting positions should be as folowing (Of course, not the same turtles colours)
+    ![pos.png](media/starting_pos.png)
+
 
 * Create a custom message called TwistArray that contains four geometry_msgs/Twist, one for each turtle. ([source](http://docs.ros.org/en/api/geometry_msgs/html/msg/Twist.html))
-
 
 * Create a node called collecter_node that subscribes to the topics that commander_node publishes to. 
     * It collects the data from /turtle\<i>_cmd topics and publishes it to a topic with type TwistArray (You created this message) (The topic name is turtles_cmd)
@@ -73,15 +79,25 @@ Your task is to do the following:
 The following points can be awarded after finishing all the previous steps. Then you can make another package with the bonus parts.
 
 * Change the necessary codes including the commander_node to make them draw the shape using only 3 turtles (1 point)
-* Change the architechture and make it better, and justify why!
+* Change and optimize the architechture and make it better, and justify why!
 * Combine the start_server with the commander_node (Change the commander_node)
 * Create the nodes in OOP style!
 * If you can directly remap topics from the commander_node to the turtles through the launch file!
+* Find bugs in the assignment description, assignment supported materials (image, given package, ...etc)
+* Improve the homework task for making it more challenging!
+* Add README.md with commands and documentation on how to run these nodes, pakcages, launch files.
+
+
+### System architecture
+![arch.png](media/Intro2ROS-homework.png)
+
 
 ## Submission
 
-You should submit a zip file that includes only your ROS package to Moodle. For teams, you can submit a single package!
 
+You shoud take a screenshot of the result of the turtlesim after the turtles draws everything and submit it inside a folder inside the package called media. Furthermore, you can add a README.md if you like for documentation or notes.
+
+You should submit a zip file that includes only your ROS package to Moodle. For teams, you can submit a single package!
 
 ## Grading
 
@@ -90,4 +106,4 @@ You should submit a zip file that includes only your ROS package to Moodle. For 
 * The deadline is flexible which means that if you are late by minutes or couple of hours (i.e, till 3 hours it is ok).
 * Late submission is allowed in case of problems out of control (health including physical or mental problems). So, do not worry, your health should be your number 1 priority!
 * Do not worry if you had some problems, you can ask us anytime, ask your friends, it is not bad to ask for help!
-* If you
+* Please do not put a lot of time in the assignment (maybe 2~3 hours per day), enjoy your time, do not feel stressed and do not wake all the night solving the assignment, please!
