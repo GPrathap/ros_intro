@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="subscriber" pkg="exercise2" type="subscriber"/>
+    <node name="publisher" pkg="exercise2" type="publisher"/>
+    <node name="turtlesim" pkg="turtlesim" type="turtlesim_node"/>
+</launch>
