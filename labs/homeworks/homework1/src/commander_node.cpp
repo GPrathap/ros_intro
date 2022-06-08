@@ -106,15 +106,10 @@ int main(int argc, char **argv){
     ros::init(argc, argv, "commander_node");
     ros::NodeHandle n;
     ros::Subscriber start_flag_sub = n.subscribe("/start_topic", 1, start_callback_sub);
-    // ros::Publisher turtle1_pub = n.advertise<geometry_msgs::Twist>("/turtle1_cmd", 10);
-    // ros::Publisher turtle2_pub = n.advertise<geometry_msgs::Twist>("/turtle2_cmd", 10);
-    // ros::Publisher turtle3_pub = n.advertise<geometry_msgs::Twist>("/turtle3_cmd", 10);
-    // ros::Publisher turtle4_pub = n.advertise<geometry_msgs::Twist>("/turtle4_cmd", 10);
-
-    ros::Publisher turtle1_pub = n.advertise<geometry_msgs::Twist>("/turtle1/cmd_vel", 10);
-    ros::Publisher turtle2_pub = n.advertise<geometry_msgs::Twist>("/turtle2/cmd_vel", 10);
-    ros::Publisher turtle3_pub = n.advertise<geometry_msgs::Twist>("/turtle3/cmd_vel", 10);
-    ros::Publisher turtle4_pub = n.advertise<geometry_msgs::Twist>("/turtle4/cmd_vel", 10);
+    ros::Publisher turtle1_pub = n.advertise<geometry_msgs::Twist>("/turtle1_cmd", 10);
+    ros::Publisher turtle2_pub = n.advertise<geometry_msgs::Twist>("/turtle2_cmd", 10);
+    ros::Publisher turtle3_pub = n.advertise<geometry_msgs::Twist>("/turtle3_cmd", 10);
+    ros::Publisher turtle4_pub = n.advertise<geometry_msgs::Twist>("/turtle4_cmd", 10);
 
     ros::Publisher turtles_done_pub[] = {n.advertise<std_msgs::Bool>("/turtle1_done", 10),
                                          n.advertise<std_msgs::Bool>("/turtle2_done", 10),
