@@ -1,6 +1,0 @@
-<launch>
-    <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node" />
-    <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" args="cmd_vel:=turtle1/cmd_vel">
-    </node>
-</launch>
-
