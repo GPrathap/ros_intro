@@ -43,11 +43,11 @@ add_executable(friend_hello_sub src/friend_hello_sub.cpp)
 # add_dependencies(friend_hello_sub  hello_friend_generate_messages_cpp)
 target_link_libraries(friend_hello_sub ${catkin_LIBRARIES})
 
-# add_executable(friend_service_server src/friend_service_server.cpp)
+add_executable(friend_service_server src/friend_service_server.cpp)
 # add_dependencies(friend_service_server  hello_friend_generate_messages_cpp)
-# target_link_libraries(friend_service_server ${catkin_LIBRARIES})
+target_link_libraries(friend_service_server ${catkin_LIBRARIES})
 
-# add_executable(friend_service_client src/friend_service_client.cpp)
+add_executable(friend_service_client src/friend_service_client.cpp)
 # add_dependencies(friend_service_client  hello_friend_generate_messages_cpp)
-# target_link_libraries(friend_service_client ${catkin_LIBRARIES})
+target_link_libraries(friend_service_client ${catkin_LIBRARIES})
 

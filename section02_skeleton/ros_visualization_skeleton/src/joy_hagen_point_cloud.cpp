@@ -14,7 +14,7 @@ int main( int argc, char **argv )
   ros::Publisher pub_pc = n.advertise< sensor_msgs::PointCloud2 >("/joy_hagen_point_cloud/point_cloud", 1000);
 
   sensor_msgs::PointCloud2 msg_pc;
-  pcl::PointCloud< pcl::PointXYZ > pc;
+  pcl::PointCloud<pcl::PointXYZ> pc;
   pc.width  = 200;
   pc.height = 100;
   pc.is_dense = false;
