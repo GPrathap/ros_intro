@@ -60,7 +60,9 @@ Your task is to do the following:
 * Create a node called collecter_node that subscribes to the topics that commander_node publishes to. 
     * It collects the data from /turtle\<i>_cmd topics and publishes it to a topic with type TwistArray (You created this message) (The topic name is turtles_cmd)
 
-    * It subscribes to /turtle\<i>/pose topics from turtlesim and collects them to a topic called turtles_positions with type geometry_msgs/PoseArray ([Source](http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseArray.html))
+    * It subscribes to /turtle\<i>/pose topics from turtlesim and collects them to a topic called turtles_positions with type geometry_msgs/PoseArray ([Source](http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseArray.html)).
+        * Note: [geometry_msgs/PoseArray](http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/PoseArray.html) contains an array of [geometry_msgs/Pose](http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/Pose.html) and  [std_msgs/header](http://docs.ros.org/en/lunar/api/std_msgs/html/msg/Header.html). You may not use the header data.
+        * /turtle\<i>/pose topics has a message with type: [turtlesim/Pose](http://docs.ros.org/en/api/turtlesim/html/msg/Pose.html), however, it is not the same as geometry_msgs/Pose. Thus, you either use geometry_msgs/PoseArray and map between the data fields (they are not the same), for example, turtlesim/Pose has linear_velocity and angular_velocity but geometry_msgs/Pose does not have them, you may put these values in the Quaternion part of the message and so on. Or create a new custom message that has 4 fields (or array) of turtlesim/Pose messages and use it, and this doing this is better.
 
 * Create a node called mapper_node that subscribe to the topic (/turtles_cmd) from the collector_node and publishes it to the correct turtles velocity commands topics 
 
