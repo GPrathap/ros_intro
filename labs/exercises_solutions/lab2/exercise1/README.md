@@ -1,7 +1,10 @@
-# Exercise 3: ROS launch
+# Exercise 1: ROS launch
+
 
 
 ## Soultion:
+
+Check this package [here](https://github.com/GPrathap/ros_intro/tree/intro/labs/exercises_solutions/lab1/exercise3)
 
 ```bash
 
