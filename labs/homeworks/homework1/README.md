@@ -41,6 +41,8 @@ Your task is to do the following:
 
 * Add the name of the team members (first and last names) in Maintainers in package.xml
 
+* Create a server called start_server that has two services /start and /stop that sends to a topic /start_topic with type std_msgs/Bool that if /start service is called from the command line, it will publish to /start_topic True, and if /stop service is called, it will publish False. This topic is subscribed by the commander_node.
+
 * Create a node called turtles_spawner
     * Kill the initial turtle ([turtlesim/Kill service](http://docs.ros.org/en/api/turtlesim/html/srv/Kill.html))
     * Spawn four turtles with the following parameters
@@ -67,8 +69,6 @@ Your task is to do the following:
 * Create a node called mapper_node that subscribe to the topic (/turtles_cmd) from the collector_node and publishes it to the correct turtles velocity commands topics 
 
 * Create a service that's called status that when it is requested with an std_srvs/Empty request ([Source](http://docs.ros.org/en/api/std_srvs/html/srv/Empty.html)), it just responds with an Empty response as well but prints to the command line the status of the turtles using ROS_INFO. It gets the information of the turtles status from /turtle\<i>_done topics
-
-* Create a server called start_server that has two services /start and /stop that sends to a topic /start_topic with type std_msgs/Bool that if /start service is called from the command line, it will publish to /start_topic True, and if /stop service is called, it will publish False. This topic is subscribed by the commander_node.
 
 * Do not forget to change CMakeLists.txt and package.xml
 
