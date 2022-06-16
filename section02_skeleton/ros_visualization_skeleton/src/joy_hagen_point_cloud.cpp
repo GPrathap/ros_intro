@@ -18,11 +18,15 @@ int main( int argc, char **argv )
   pc.width  = 200;
   pc.height = 100;
   pc.is_dense = false;
+  pc.resize(pc.width*pc.height);
   // TODO resize the pc with its size 
   for( size_t i = 0; i < pc.height; ++i ) {
     for( size_t j = 0; j < pc.width; ++j ) {
       const size_t k = pc.width * i + j;
-      // TODO assign the x, y, and z values of each point  
+      // TODO assign the x, y, and z values of each point
+        pc.points[k].x = 23;
+        pc.points[k].y = 13;
+        pc.points[k].z = 23;
     }
   }
 
@@ -32,11 +36,17 @@ int main( int argc, char **argv )
     for( size_t i = 0; i < pc.height; ++i ) {
       for( size_t j = 0; j < pc.width; ++j ) {
         const size_t k = pc.width * i + j;
-        // TODO assign the x, y, and z values of each point  
+        // TODO assign the x, y, and z values of each point
+        pc.points[k].x = 454;
+        pc.points[k].y = 13;  
       }
     }
+
+    pcl::toROSMsg(pc, msg_pc);
     // TODO use pcl::toROSMsg to convert pcl message to ROS message 
-    // TODO set header frame id of msg_pc as the "pc_frame" 
+    // TODO set header frame id of msg_pc as the "pc_frame"
+    msg_pc.header.frame_id = "something";
+    // msg_pc.header.stamp = ros::Time::now(); 
     pub_pc.publish(msg_pc);
     ros::spinOnce();
     rate.sleep();
