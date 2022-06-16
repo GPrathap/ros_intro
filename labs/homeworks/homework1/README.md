@@ -41,6 +41,8 @@ Your task is to do the following:
 
 * Add the name of the team members (first and last names) in Maintainers in package.xml
 
+* Create a server called start_server that has two services /start and /stop that sends to a topic /start_topic with type std_msgs/Bool that if /start service is called from the command line, it will publish to /start_topic True, and if /stop service is called, it will publish False. This topic is subscribed by the commander_node.
+
 * Create a node called turtles_spawner
     * Kill the initial turtle ([turtlesim/Kill service](http://docs.ros.org/en/api/turtlesim/html/srv/Kill.html))
     * Spawn four turtles with the following parameters
@@ -60,13 +62,13 @@ Your task is to do the following:
 * Create a node called collecter_node that subscribes to the topics that commander_node publishes to. 
     * It collects the data from /turtle\<i>_cmd topics and publishes it to a topic with type TwistArray (You created this message) (The topic name is turtles_cmd)
 
-    * It subscribes to /turtle\<i>/pose topics from turtlesim and collects them to a topic called turtles_positions with type geometry_msgs/PoseArray ([Source](http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseArray.html))
+    * It subscribes to /turtle\<i>/pose topics from turtlesim and collects them to a topic called turtles_positions with type geometry_msgs/PoseArray ([Source](http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseArray.html)).
+        * Note: [geometry_msgs/PoseArray](http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/PoseArray.html) contains an array of [geometry_msgs/Pose](http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/Pose.html) and  [std_msgs/header](http://docs.ros.org/en/lunar/api/std_msgs/html/msg/Header.html). You may not use the header data.
+        * /turtle\<i>/pose topics has a message with type: [turtlesim/Pose](http://docs.ros.org/en/api/turtlesim/html/msg/Pose.html), however, it is not the same as geometry_msgs/Pose. Thus, you either use geometry_msgs/PoseArray and map between the data fields (they are not the same), for example, turtlesim/Pose has linear_velocity and angular_velocity but geometry_msgs/Pose does not have them, you may put these values in the Quaternion part of the message and so on. Or create a new custom message that has 4 fields (or array) of turtlesim/Pose messages and use it, and this doing this is better.
 
-* Create a node called mapper_node that subscribe to the topic (/turtles_cmd) from the collector_node and publishes it to the correct turtles velocity commands topics 
+* Create a node called mapper_node that subscribe to the topic (/turtles_cmd) from the collector_node and publishes it to the correct turtles velocity commands topics that the turtlesim is subscribing to
 
 * Create a service that's called status that when it is requested with an std_srvs/Empty request ([Source](http://docs.ros.org/en/api/std_srvs/html/srv/Empty.html)), it just responds with an Empty response as well but prints to the command line the status of the turtles using ROS_INFO. It gets the information of the turtles status from /turtle\<i>_done topics
-
-* Create a server called start_server that has two services /start and /stop that sends to a topic /start_topic with type std_msgs/Bool that if /start service is called from the command line, it will publish to /start_topic True, and if /stop service is called, it will publish False. This topic is subscribed by the commander_node.
 
 * Do not forget to change CMakeLists.txt and package.xml
 
