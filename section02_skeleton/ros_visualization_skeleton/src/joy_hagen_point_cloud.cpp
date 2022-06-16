@@ -24,9 +24,9 @@ int main( int argc, char **argv )
     for( size_t j = 0; j < pc.width; ++j ) {
       const size_t k = pc.width * i + j;
       // TODO assign the x, y, and z values of each point
-        pc.points[k].x = 23;
-        pc.points[k].y = 13;
-        pc.points[k].z = 23;
+        pc.points[k].x = 0.1 * i;
+        pc.points[k].y = 0.2 * j;
+        pc.points[k].z = 1.5;
     }
   }
 
@@ -37,8 +37,7 @@ int main( int argc, char **argv )
       for( size_t j = 0; j < pc.width; ++j ) {
         const size_t k = pc.width * i + j;
         // TODO assign the x, y, and z values of each point
-        pc.points[k].x = 454;
-        pc.points[k].y = 13;  
+        pc.points[k].z -= 0.1;  
       }
     }
 
