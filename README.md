@@ -6,7 +6,7 @@
     - Workout Examples  [:books: lecture 03](lectures/ros_lecture03.pdf)
 - Section 2 :alien:	
     - ROS Visualization  [:books: lecture 04](lectures/ros_lecture04.pdf)
-    - ROS Debugging [:books: lecture 05](lectures/ros_lecture04.pdf)	
+    - ROS Debugging [:books: lecture 05](lectures/ros_lecture05.pdf)	
     - ROS Basic Control :books:	
     - ROS Simulation (Gazebo+URDF) :books:	
 - Section 3 :alien:	
