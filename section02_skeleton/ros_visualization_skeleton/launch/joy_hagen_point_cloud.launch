@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <launch>
   <node pkg="ros_visualization_skeleton" type="joy_hagen_point_cloud" name="joy_hagen_point_cloud" output="screen"/>
   <node pkg="rviz" type="rviz" name="rviz" />
+  <node pkg="tf" type="static_transform_publisher" name="sdfsfsf" 
+            args="0 0 2.3 0 0 0 map something 100" />
 </launch>
 
