@@ -6,6 +6,7 @@
 #include <pcl/point_types.h>
 
 // http://wiki.ros.org/pcl/Overview
+// http://wiki.ros.org/navigation/Tutorials/RobotSetup/Odom
 
 int main( int argc, char **argv )
 {
