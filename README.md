@@ -2,11 +2,11 @@
 ## Course Structure :space_invader:
     
 - Section 1 :alien:	
-    - ROS Fundamentals [:books:	lecture 01](lectures/ros_lecture01.pdf) [:books:	lecture 02](lectures/ros_lecture02.pdf)
-    - Workout Examples  [:books: lecture 03](lectures/ros_lecture03.pdf)
+    - ROS Fundamentals [:books:	lecture 01](lectures/ros_lecture01.pdf) [:books: lecture 02](lectures/ros_lecture02.pdf) [:scroll: code](section00/pub_sub/)
+    - Workout Examples  [:books: lecture 03](lectures/ros_lecture03.pdf) [:scroll: code](section01_skeleton/)
 - Section 2 :alien:	
-    - ROS Visualization  [:books: lecture 04](lectures/ros_lecture04.pdf)
-    - ROS Debugging [:books: lecture 05](lectures/ros_lecture05.pdf)	
+    - ROS Visualization  [:books: lecture 04](lectures/ros_lecture04.pdf) [:scroll: code](section02_skeleton/ros_visualization_skeleton/)
+    - ROS Debugging [:books: lecture 05](lectures/ros_lecture05.pdf) [:scroll: code](section02_skeleton/ros_debugging_skeleton/)	
     - ROS Basic Control :books:	
     - ROS Simulation (Gazebo+URDF) :books:	
 - Section 3 :alien:	
