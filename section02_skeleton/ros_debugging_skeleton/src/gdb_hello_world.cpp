@@ -2,6 +2,7 @@
 #include <ros/ros.h>
 #include <ros/console.h>
 
+// http://wiki.ros.org/roslaunch/Tutorials/Roslaunch%20Nodes%20in%20Valgrind%20or%20GDB
 #define OVERRIDE_NODE_VERBOSITY_LEVEL 1
 
 int main( int argc, char **argv )
