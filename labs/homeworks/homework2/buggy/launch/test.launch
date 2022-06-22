@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node name ="ub" pkg="buggy" type="pup" output="screen"/>
+    <node name ="ub" pkg="buggy" type="cub" output="screen"/>
+</launch> 
