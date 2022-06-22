@@ -28,7 +28,7 @@ rosservice call /turnon "flag:
   data: True"
 ```
   
-Then, it should print "You finished, congrats on 5 points"
+Then, it should print "You finished, congrats on 8 points"
 
 **Note: You can ask for hints for this part (up to 3 hints), each hint will cost you 0.5 point (1st hint), then 1 point (2nd hint), then 1.5 points (3rd hint). The hints are fixed (All the hints provided for the students are the same)**
 
@@ -69,10 +69,11 @@ For the second bag: (You may increase the rate of playing the rosbag)
 * visualize using Rviz: 
     - /lio_sam/mapping/cloud_registered (PointCloud2)
 
-Notes: 
-    * Set the fixed_frame to map
-    * Change size of point cloud to 0.1
-    * Change decay time to 100
+Notes:
+
+* Set the fixed_frame to map
+* Change size of point cloud to 0.1
+* Change decay time to 100
 
 Take a screenshot in the middle of the bag (After sometime from playing the bag, you will monitor some sort of Innopolis map)
 
@@ -133,6 +134,6 @@ You need to submit a single zip file that contains the following:
 * The deadline is flexible which means that if you are late by minutes or couple of hours (i.e, till 3 hours it is ok).
 * Late submission is allowed in case of problems out of control (health including physical or mental problems). So, do not worry, your health should be your number 1 priority!
 * Do not worry if you had some problems, you can ask us anytime, ask your friends, it is not bad to ask for help!
-* Please do not put a lot of time in the assignment (maybe 4~5 hours for the whole assignment), enjoy your time, do not feel stressed and do not wake all the night solving the assignment, please!
+* Please do not put a lot of time in the assignment (maybe 5~6 hours for the whole assignment), enjoy your time, do not feel stressed and do not wake all the night solving the assignment, please!
 
 
