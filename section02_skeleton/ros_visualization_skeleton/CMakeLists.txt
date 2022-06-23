@@ -13,6 +13,8 @@ find_package(catkin REQUIRED
       driver_base
       diagnostic_updater
       cv_bridge
+      tf
+      nav_msgs
       image_transport
       pcl_conversions
       interactive_markers)
@@ -36,6 +38,8 @@ catkin_package(
       diagnostic_updater
       cv_bridge
       image_transport
+      tf
+      nav_msgs
       pcl_conversions
       interactive_markers)
 

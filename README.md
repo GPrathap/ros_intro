@@ -8,7 +8,7 @@
     - ROS Visualization  [:books: lecture 04](lectures/ros_lecture04.pdf) [:scroll: code](section02_skeleton/ros_visualization_skeleton/)
     - ROS Debugging [:books: lecture 05](lectures/ros_lecture05.pdf) [:scroll: code](section02_skeleton/ros_debugging_skeleton/)	
     - ROS Basic Control :books:	
-    - ROS Simulation (Gazebo+URDF) :books:	
+    - ROS Simulation (Gazebo+URDF) [:books: lecture 06](lectures/ros_lecture06.pdf) [:scroll: code](section02_skeleton/ros_gazebo_skeleton/)	
 - Section 3 :alien:	
     - Mini Group Project 
 - References
