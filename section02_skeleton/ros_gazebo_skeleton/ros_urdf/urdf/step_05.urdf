@@ -60,6 +60,7 @@
       <material name="black"/>
     </visual>
   </link>
+
   <joint name="right_front_wheel_joint" type="fixed">
     <parent link="right_base"/>
     <child link="right_front_wheel"/>
@@ -75,6 +76,7 @@
       <material name="black"/>
     </visual>
   </link>
+
   <joint name="right_back_wheel_joint" type="fixed">
     <parent link="right_base"/>
     <child link="right_back_wheel"/>
@@ -136,6 +138,7 @@
       <material name="black"/>
     </visual>
   </link>
+
   <joint name="left_back_wheel_joint" type="fixed">
     <parent link="left_base"/>
     <child link="left_back_wheel"/>
@@ -167,7 +170,7 @@
     <visual>
       <origin rpy="0.0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/l_finger.dae"/>
+        <mesh filename="package://ros_urdf/meshes/l_finger.dae"/>
       </geometry>
     </visual>
   </link>
@@ -181,10 +184,11 @@
     <visual>
       <origin rpy="0.0 0 0" xyz="0.09137 0.00495 0"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/l_finger_tip.dae"/>
+        <mesh filename="package://ros_urdf/meshes/l_finger_tip.dae"/>
       </geometry>
     </visual>
   </link>
+
   <joint name="right_gripper_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.2 -0.01 0"/>
     <parent link="gripper_pole"/>
@@ -195,7 +199,7 @@
     <visual>
       <origin rpy="-3.1415 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/l_finger.dae"/>
+        <mesh filename="package://ros_urdf/meshes/l_finger.dae"/>
       </geometry>
     </visual>
   </link>
@@ -209,7 +213,7 @@
     <visual>
       <origin rpy="-3.1415 0 0" xyz="0.09137 0.00495 0"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/l_finger_tip.dae"/>
+        <mesh filename="package://ros_urdf/meshes/l_finger_tip.dae"/>
       </geometry>
     </visual>
   </link>
@@ -222,6 +226,7 @@
       <material name="white"/>
     </visual>
   </link>
+
   <joint name="head_swivel" type="fixed">
     <parent link="base_link"/>
     <child link="head"/>
