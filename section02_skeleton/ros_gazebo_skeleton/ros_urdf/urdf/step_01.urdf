@@ -7,4 +7,20 @@
       </geometry>
     </visual>
   </link>
+
+  <link name="right_bar">
+    <visual>
+      <geometry>
+        <box size="0.2 0.4 0.5"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="my_joint" type="fixed">
+    <origin xyz="0 0 1" rpy="0 0 3.1416"/>
+    <parent link="base_link"/>
+    <child link="right_bar"/>
+  </joint>
+
 </robot>

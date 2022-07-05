@@ -23,7 +23,7 @@ int main( int argc, char** argv )
   ros::init(argc, argv, "joy_hagen_basic_control");
   interactive_markers::InteractiveMarkerServer server("marker");
   visualization_msgs::InteractiveMarker marker;
-  marker.header.frame_id = "/base_link";
+  marker.header.frame_id = "base_link";
   marker.name = "marker";
   marker.description = "2-DOF Control";
 

@@ -2,7 +2,7 @@
 <robot name="materials">
 
   <material name="blue">
-    <color rgba="0 0 0.8 1"/>
+    <color rgba="0.6 0.4 1 1"/>
   </material>
 
   <material name="white">

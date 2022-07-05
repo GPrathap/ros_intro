@@ -2,6 +2,7 @@
 <launch>
   <node pkg="ros_visualization_skeleton" type="joy_hagen_basic_control" name="joy_hagen_basic_control" output="screen"/>
   <node pkg="rviz" type="rviz" name="rviz" />
-  <node pkg="tf" type="static_transform_publisher" name="sdfsfsf" args="" >
+  <node pkg="tf" type="static_transform_publisher" name="odom_node" 
+            args="0 0 2.3 0 0 0 map base_link 100" />
 </launch>
 
